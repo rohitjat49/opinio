@@ -1,7 +1,6 @@
 import Image from "next/image";
 import EventHeader from "./EventHeader";
 import LiveScore from "./LiveScore";
-import BettingUi from "./BettingUi";
 import ButtonNav from "../Home/ButtonNav";
 import PredictionTabs from "./PredictionTabs";
 
@@ -14,7 +13,6 @@ const LiveMatch = () => {
     <EventHeader/>
     <LiveScore/>
     <PredictionTabs/>
-    {/* <BettingUi/> */}
     <ButtonNav/>
 
     
