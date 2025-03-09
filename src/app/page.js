@@ -9,11 +9,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-<div>
-
-
-    {/* <PredictionHome/> */}
- 
+   <div className="">
+    <HomePage/>  
+    
    </div>
   );
 }
