@@ -150,7 +150,7 @@ const AboutEvent = () => {
       <h2 className="text-lg font-medium">About the Event</h2>
 
       {/* Event Details (Grid) */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center text-[#9D9D9D]">
+      <div className="grid grid-cols-4  gap-6 text-center text-[#9D9D9D]">
         {[
           { label: "Trader", value: "56" },
           { label: "Volume", value: "11.6k" },
