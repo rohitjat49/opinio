@@ -488,13 +488,14 @@ const MatchCard = ({ match }) => {
   const router = useRouter(); // 👈 Router initialize inside component
 
   return (
-    <Link
-      href="about"
-      className="relative w-48 h-[270px] rounded-2xl p-2 shadow-lg bg-[#151414] cursor-pointer"
+    <Link href="about"> 
+    <div
+      // href="about"
+      className="relative w-44 h-[270px] rounded-2xl p-2 shadow-lg  bg-[#151414] cursor-pointer border-[0.5px] border-[#222222]"
     >
       {/* Background Image */}
       <div
-        className="w-full h-full rounded-2xl p-2 bg-cover bg-center flex flex-col justify-between shadow-md"
+        className="w-full h-full rounded-2xl p-2 bg-cover bg-center flex flex-col justify-between shadow-md border-[0.5px] border-[#222222]"
         style={{ backgroundImage: "url('/Image/Card.png')" }}
       >
         {/* First Div: Live Badge & Favorite Icon */}
@@ -535,6 +536,7 @@ const MatchCard = ({ match }) => {
           <h2 className="text-lg font-medium text-white">{match.title}</h2>
           <p className="text-gray-300 text-xs">{match.details}</p>
         </div>
+      </div>
       </div>
     </Link>
   );

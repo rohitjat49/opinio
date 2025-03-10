@@ -23,7 +23,7 @@ import { IoArrowUndo, IoShareOutline } from 'react-icons/io5';
 
 export default function EventHeader() {
   return (
-    <div className="flex items-center justify-between  text-white p-4">
+    <div className="flex items-center justify-between  text-white ">
       <button className="flex items-center justify-center w-10 h-10 bg-[#333] rounded-full">
         <IoArrowUndo size={24} />
       </button>

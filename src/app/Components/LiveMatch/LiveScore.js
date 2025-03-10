@@ -172,8 +172,8 @@ import Image from 'next/image';
 
 export default function LiveScore() {
   return (
-    <div className="flex justify-center items-center rounded-3xl p-2 bg-[#151414]">
-      <div className="relative p-4 rounded-2xl bg-cover bg-center mt-2 bg-[url('/Image/Card.png')]">
+    <div className="flex justify-center items-center rounded-3xl mt-8 p-4 bg-[#151414]  border-[0.5px] border-[#222222]">
+      <div className="relative p-4 rounded-2xl bg-cover bg-center  bg-[url('/Image/Card.png')]  border-[0.5px] border-[#222222]">
         {/* Live Badge */}
              <div className="absolute top-5 left-3 flex items-center space-x-1 bg-[#333333] bg-opacity-70 px-3 py-1 rounded-2xl shadow">
                <span className="text-white text-sm font-semibold">Live</span>
