@@ -59,7 +59,8 @@ const PredictionHome = () => {
   return (
     <>
       <div 
-        className="relative mx-auto items-center  justify-center w-[442px] p-4 container bg-cover bg-center"
+        className="relative  p-4 container bg-cover bg-center 
+        mx-auto items-center justify-center w-[442px] bg-[#141414]  "
         style={{ backgroundImage: "url('/Image/Group 1000005858.png')" }}
       >
         {/* Black Overlay */}
