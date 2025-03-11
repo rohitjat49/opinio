@@ -393,7 +393,7 @@ export default function OnboardingScreen() {
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex justify-between w-[440px] mt-12">
+          <div className="flex justify-between w-[280px] mt-12">
             <button
               className="text-gray-400 cursor-pointer"
               onClick={() => router.push("/auth")}
