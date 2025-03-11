@@ -476,6 +476,112 @@
 //   );
 // }
 
+// "use client";
+
+// import Image from "next/image";
+// import { useRouter } from "next/navigation";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css";
+// import Link from "next/link";
+
+// const MatchCard = ({ match }) => {
+//   const router = useRouter(); // 👈 Router initialize inside component
+
+//   return (
+//     <Link href="about"> 
+//     <div
+//       // href="about"
+//       className="relative w-48 h-[270px] rounded-2xl p-2 shadow-lg  bg-[#151414] cursor-pointer border-[0.5px] border-[#222222]"
+//     >
+//       {/* Background Image */}
+//       <div
+//         className="w-full h-full rounded-2xl p-2 bg-cover bg-center flex flex-col justify-between shadow-md border-[0.5px] border-[#222222]"
+//         style={{ backgroundImage: "url('/Image/Card.png')" }}
+//       >
+//         {/* First Div: Live Badge & Favorite Icon */}
+//         <div className="flex items-center justify-between">
+//           {/* Live Badge */}
+//           <div className="flex items-center bg-[#333333] bg-opacity-70 px-3 py-1 rounded-full shadow">
+//             <span className="text-white text-lg font-light">Live</span>
+//             <Image
+//               src="/Image/image 2.png"
+//               alt="Live"
+//               width={18}
+//               height={18}
+//               className="ml-1"
+//             />
+//           </div>
+//           {/* Favorite (Star) Icon */}
+//           <Image
+//             src="/Image/Icon (1).png"
+//             alt="Favorite"
+//             width={22}
+//             height={22}
+//           />
+//         </div>
+
+//         {/* Second Div: Match Image */}
+//         <div className="flex justify-center items-center p-2">
+//           <Image
+//             src={match.image}
+//             alt={match.title}
+//             width={140}
+//             height={90}
+//             className="rounded-lg shadow-md"
+//           />
+//         </div>
+
+//         {/* Third Div: Match Title & Score */}
+//         <div className="text-center mt-2 mb-3">
+//           <h2 className="text-lg font-medium text-white">{match.title}</h2>
+//           <p className="text-gray-300 text-xs">{match.details}</p>
+//         </div>
+//       </div>
+//       </div>
+//     </Link>
+//   );
+// };
+
+// export default function Matches() {
+//   const matches = [
+//     {
+//       image: "/Image/image (2).png",
+//       title: "Ind vs Pak",
+//       details: "ICC Champions Trophy 2025",
+//     },
+//     {
+//       image: "/Image/image (2).png",
+//       title: "NZ vs SA",
+//       details: "ODI Series [5-0] Match 4",
+//     },
+//     {
+//       image: "/Image/image (2).png",
+//       title: "AUS vs ENG",
+//       details: "Ashes Series 2025",
+//     },
+//     {
+//       image: "/Image/image (2).png",
+//       title: "WI vs SL",
+//       details: "T20 World Cup Qualifiers",
+//     },
+//   ];
+
+//   return (
+//     <div className="flex justify-center items-center gap-8 py-8 w-[392px] mx-auto">
+//       <Swiper spaceBetween={12} slidesPerView={2}>
+//         {matches.map((match, index) => (
+//           <SwiperSlide key={index}>
+//             <MatchCard match={match} />
+//           </SwiperSlide>
+//         ))}
+//       </Swiper>
+//     </div>
+//   );
+// }
+
+
+
+
 "use client";
 
 import Image from "next/image";
@@ -483,6 +589,7 @@ import { useRouter } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Link from "next/link";
+import BallBox from "../../ui/LiveButton";
 
 const MatchCard = ({ match }) => {
   const router = useRouter(); // 👈 Router initialize inside component
@@ -491,16 +598,14 @@ const MatchCard = ({ match }) => {
     <Link href="about"> 
     <div
       // href="about"
-      className="relative w-44 h-[270px] rounded-2xl p-2 shadow-lg  bg-[#151414] cursor-pointer border-[0.5px] border-[#222222]"
+      className="relative w-[186px] h-[270px] rounded-2xl p-2 shadow-lg  bg-[#151414] cursor-pointer border-[0.5px] border-[#222222]"
     >
       {/* Background Image */}
       <div
-        className="w-full h-full rounded-2xl p-2 bg-cover bg-center flex flex-col justify-between shadow-md border-[0.5px] border-[#222222]"
+        className="w-full h-full rounded-2xl p-1 bg-cover bg-center flex flex-col justify-between shadow-md border-[0.5px] border-[#222222] overflow-hidden"
         style={{ backgroundImage: "url('/Image/Card.png')" }}
       >
-        {/* First Div: Live Badge & Favorite Icon */}
-        <div className="flex items-center justify-between">
-          {/* Live Badge */}
+        {/* <div className="flex items-center justify-between">
           <div className="flex items-center bg-[#333333] bg-opacity-70 px-3 py-1 rounded-full shadow">
             <span className="text-white text-lg font-light">Live</span>
             <Image
@@ -511,16 +616,16 @@ const MatchCard = ({ match }) => {
               className="ml-1"
             />
           </div>
-          {/* Favorite (Star) Icon */}
           <Image
             src="/Image/Icon (1).png"
             alt="Favorite"
             width={22}
             height={22}
           />
-        </div>
+        </div> */}
 
-        {/* Second Div: Match Image */}
+        <div><BallBox/></div>
+
         <div className="flex justify-center items-center p-2">
           <Image
             src={match.image}
@@ -531,7 +636,6 @@ const MatchCard = ({ match }) => {
           />
         </div>
 
-        {/* Third Div: Match Title & Score */}
         <div className="text-center mt-2 mb-3">
           <h2 className="text-lg font-medium text-white">{match.title}</h2>
           <p className="text-gray-300 text-xs">{match.details}</p>

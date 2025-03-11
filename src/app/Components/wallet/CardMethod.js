@@ -125,6 +125,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useState } from "react";
+import { FaAngleUp, FaAngleDown } from "react-icons/fa";
+import Image from "next/image";
 
 const schema = yup.object().shape({
   cardNumber: yup
@@ -151,6 +153,7 @@ const schema = yup.object().shape({
 });
 
 export default function CardMethod() {
+    const [isOpen, setIsOpen] = useState(false);
   const {
     register,
     handleSubmit,
@@ -183,41 +186,48 @@ export default function CardMethod() {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-gray-900 text-white p-6 rounded-lg shadow-lg">
-      <h2 className="text-lg font-semibold flex items-center gap-2">
-        <span>💳</span> Debit / Credit Card
-      </h2>
+    <div className="max-w-md mx-auto bg-[#3C3C3C] text-white p-6 rounded-lg shadow-lg">
+     <div
+      className="flex items-center justify-between  text-white  rounded-md cursor-pointer"
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <div className="flex items-center gap-2">
+        <Image src="/Image/CreditCard.png" alt="Card Icon" width={24} height={24} />
+        <span className="text-[16px] font-normal">Debit / Credit Card</span>
+      </div>
+      {isOpen ? <FaAngleUp className="text-xl" /> : <FaAngleDown className="text-xl" />}
+    </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="mt-4 space-y-4">
+      <form onSubmit={handleSubmit(onSubmit)} className="mt-6 space-y-5 text-xs font-normal">
         {/* Card Number */}
         <div>
-          <label className="block text-sm">Card Number</label>
+          <label className="block mb-2">Card Number</label>
           <input
             type="text"
             placeholder="XXXX-XXXX-XXXX-XXXX"
             value={cardNumber}
             onChange={handleCardInput}
             maxLength={19}
-            className="w-full p-2 rounded bg-gray-800 border border-gray-600 text-white focus:outline-none"
+            className="w-full  rounded-xl py-5 px-5  border border-[#C5C6CC] text-white focus:outline-none"
           />
-          {errors.cardNumber && <p className="text-red-500 text-xs">{errors.cardNumber.message}</p>}
+          {errors.cardNumber && <p className="text-red-500 mt-1 ml-2 text-xs">{errors.cardNumber.message}</p>}
         </div>
 
         {/* CVV & Expiry */}
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm">CVV/CVC No.</label>
+            <label className="block mb-2">CVV/CVC No.</label>
             <input
               type="text"
               placeholder="000"
               {...register("cvv")}
               maxLength={3}
-              className="w-full p-2 rounded bg-gray-800 border border-gray-600 text-white focus:outline-none"
+              className="w-full  rounded-xl py-5 px-5 border border-[#C5C6CC] text-white focus:outline-none"
             />
-            {errors.cvv && <p className="text-red-500 text-xs">{errors.cvv.message}</p>}
+            {errors.cvv && <p className="text-red-500 mt-1 ml-2 text-xs">{errors.cvv.message}</p>}
           </div>
           <div>
-            <label className="block text-sm">Valid Thru</label>
+            <label className="block mb-2">Valid Thru</label>
             <input
               type="text"
               placeholder="MM/YYYY"
@@ -225,34 +235,34 @@ export default function CardMethod() {
               onChange={handleExpiryInput}
               maxLength={7}
               {...register("expiry")}
-              className="w-full p-2 rounded bg-gray-800 border border-gray-600 text-white focus:outline-none"
+              className="w-full rounded-xl py-5 px-5  border border-[#C5C6CC] text-white focus:outline-none"
             />
-            {errors.expiry && <p className="text-red-500 text-xs">{errors.expiry.message}</p>}
+            {errors.expiry && <p className="text-red-500 mt-1 ml-2 text-xs">{errors.expiry.message}</p>}
           </div>
         </div>
 
         {/* Full Name */}
         <div>
-          <label className="block text-sm">Full Name</label>
+          <label className="block mb-2">Full Name</label>
           <input
             type="text"
             placeholder="Name"
             {...register("fullName")}
-            className="w-full p-2 rounded bg-gray-800 border border-gray-600 text-white focus:outline-none"
+            className="w-full rounded-xl py-5 px-5  border border-[#C5C6CC] text-white focus:outline-none"
           />
-          {errors.fullName && <p className="text-red-500 text-xs">{errors.fullName.message}</p>}
+          {errors.fullName && <p className="text-red-500 mt-1 ml-2 text-xs">{errors.fullName.message}</p>}
         </div>
 
         {/* Submit Button */}
         <button
-          type="submit"
-          className={`w-full font-semibold p-2 rounded-lg mt-2 ${
-            isValid ? "bg-blue-600 hover:bg-blue-700 text-white" : "bg-gray-600 text-gray-400 cursor-not-allowed"
-          }`}
-          disabled={!isValid}
-        >
-          Proceed to pay ₹25
-        </button>
+  type="submit"
+  className={`w-[383px] h-[46px] rounded-[20px] text-white font-normal text-sm mt-2 
+    ${isValid ? "bg-gradient-to-r from-[#1963E3] to-[#003A9E] hover:opacity-90" : "bg-gray-400 cursor-not-allowed"}`}
+  disabled={!isValid}
+>
+  Proceed to pay ₹25
+</button>
+
       </form>
     </div>
   );

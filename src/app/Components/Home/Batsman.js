@@ -219,11 +219,11 @@ const Batsman = () => {
         {/* Traders Info with Image */}
         <div className="flex items-center gap-2 mt-3">
           <Image src="/Image/people.png" width={16} height={16} alt="Link Icon" />
-          <p className="text-gray-400 text-sm">123446 Traders</p>
+          <p className="text-[#606060] text-sm">123446 Traders</p>
         </div>
 
         {/* Last Few Innings */}
-        <p className="text-gray-400 text-[10px] mt-1">
+        <p className="text-white text-[10px] mt-1">
           Last few innings of David in knockouts: <span className="font-semibold">72* (89), 112 (120), 120* (89)</span>
         </p>
 

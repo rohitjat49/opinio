@@ -398,7 +398,7 @@ const CardComponent = () => {
             {/* Traders Info with Image */}
             <div className="flex items-center gap-2 my-4">
               <Image src="/Image/people.png" width={18} height={18} alt="Traders Icon" />
-              <p className="text-gray-400 text-sm">123,446 Traders</p>
+              <p className="text-[#606060] text-sm">123,446 Traders</p>
             </div>
 
             <p className="text-white font-light text-xs">H2H Last 5 ODI SA: 02, NZ: 03, Draw: 0</p>

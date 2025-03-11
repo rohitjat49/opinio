@@ -145,7 +145,7 @@ import { ChevronRight } from "lucide-react";
 
 const AboutEvent = () => {
   return (
-    <div className=" text-white  rounded-lg w-full max-w-lg mx-auto space-y-6">
+    <div className=" text-white  rounded-lg w-full max-w-lg mx-auto space-y-6 mt-5">
       {/* About the Event Section */}
       <h2 className="text-lg font-medium">About the Event</h2>
 

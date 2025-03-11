@@ -87,7 +87,7 @@ const data = [
 
 export default function PredictionChart() {
   return (
-    <div className="relative w-full min-h-screen bg-cover bg-center flex flex-col items-center justify-center">
+    <div className="relative w-full mt-2 bg-cover bg-center flex flex-col items-center justify-center">
       
       {/* Flags and Match Info */}
       <div className="flex items-center gap-3 mb-4 mt-5">
@@ -111,7 +111,7 @@ export default function PredictionChart() {
       <div className="relative z-10 text-white text-center">
         
         {/* H2H Last 5 ODI */}
-        <div className="mb-2 font-light text-xs">
+        <div className="mb-2 font-light text-xs mt-3">
   <span className="bg-[#606060] text-white px-4 py-2 rounded-lg">
     H2H Last 5 ODI SA: 02, NZ: 03, Draw: 0
   </span>
