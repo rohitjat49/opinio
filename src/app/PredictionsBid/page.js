@@ -1,4 +1,3 @@
-import LiveMatch from "../Components/LiveMatch/LiveMatch";
 import PredictionHome from "../Components/PredictionPage/PredictionHome";
 
 export default function PredictionsBid() {

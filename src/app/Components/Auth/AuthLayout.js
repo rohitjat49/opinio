@@ -7,7 +7,6 @@ const AuthLayout = ({ children }) => {
         >
           <div className="absolute inset-0 bg-black/50 rounded-lg"></div>
   
-          {/* Common Wrapper for Spacing */}
           <div className="relative z-10 text-center text-white flex flex-col justify-center h-full">
             {children}
           </div>

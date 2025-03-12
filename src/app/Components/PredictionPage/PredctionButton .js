@@ -9,7 +9,6 @@ const PredctionButton = () => {
 
   return (
     <div className="w-full p-3 mt-5 text-white">
-      {/* Tabs aligned to start */}
       <div className="flex justify-start font-normal gap-x-5 mt-4">
         {[
           { key: "Activity", label: "Activity" },
@@ -29,7 +28,6 @@ const PredctionButton = () => {
         ))}
       </div>
 
-      {/* Tab Content */}
       <div className="mt-4 text-gray-300">
         {orderTab === "Activity" && (
           <>
